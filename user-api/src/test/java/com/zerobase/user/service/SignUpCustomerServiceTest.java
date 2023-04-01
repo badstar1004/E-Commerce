@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import com.zerobase.user.domain.SignUpForm;
 import com.zerobase.user.domain.model.Customer;
+import com.zerobase.user.service.customer.SignUpCustomerService;
 import java.time.LocalDate;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

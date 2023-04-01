@@ -1,4 +1,4 @@
-package com.zerobase.user.service;
+package com.zerobase.user.service.customer;
 
 import com.zerobase.user.domain.model.Customer;
 import com.zerobase.user.repository.CustomerRepository;
@@ -18,7 +18,8 @@ public class CustomerService {
      * @return
      */
     public Optional<Customer> findByIdAndEmail(Long id, String email) {
-        return customerRepository.findById(id).stream().filter(customer -> customer.getEmail().equals(email))
+        return customerRepository.findById(id).stream()
+            .filter(customer -> customer.getEmail().equals(email))
             .findFirst();
     }
 
