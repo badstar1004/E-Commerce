@@ -1,0 +1,47 @@
+### 회원가입 (고객)
+POST http://localhost:8081/signup/customer
+Content-Type: application/json
+
+{
+  "birth": "1991-10-04",
+  "email": "eunjungkim1004@naver.com",
+  "name": "기믄정",
+  "password": "22445",
+  "phone": "010-1111-5555"
+}
+
+### 이메일 인증 (고객)
+GET http://localhost:8081/signup/customer/verify/?email=eunjungkim1004@naver.com&code=7RBka7XYu6
+
+### 로그인 (고객)
+POST http://localhost:8081/signin/customer
+Content-Type: application/json
+
+{
+  "email": "eunjungkim1004@naver.com",
+  "password": "22445"
+}
+
+### 회원 정보 조회 (고객)
+GET http://localhost:8081/customer/getInfo
+Content-Type: application/json
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAzNTY2MTQsImV4cCI6MTY4MDQ0MzAxNH0.iFWtzRSbxyOYWnI67b_Q7ct3DV2qGCxX_EWAFToRaBY
+
+### 잔액 변경 (고객)
+POST http://localhost:8081/customer/balance
+Content-Type: application/json
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAzNTY2MTQsImV4cCI6MTY4MDQ0MzAxNH0.iFWtzRSbxyOYWnI67b_Q7ct3DV2qGCxX_EWAFToRaBY
+
+{
+  "from": "server",
+  "message": "식비",
+  "money": -50000
+}
+
+#################################
+
+### 회원가입 (셀러)
+
+### 로그인 (셀러)
+
+### 회원 정보 조회 (셀러)
