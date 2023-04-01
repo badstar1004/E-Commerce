@@ -41,7 +41,30 @@ X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOa
 #################################
 
 ### 회원가입 (셀러)
+POST http://localhost:8081/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "1991-10-04",
+  "email": "eunjungkim1004@naver.com",
+  "name": "기믄정",
+  "password": "22445",
+  "phone": "010-1111-5555"
+}
+
+### 이메일 인증 (셀러)
+GET http://localhost:8081/signup/seller/verify/?email=eunjungkim1004@naver.com&code=LbnNKRptCc
 
 ### 로그인 (셀러)
+POST http://localhost:8081/signin/seller
+Content-Type: application/json
+
+{
+  "email": "eunjungkim1004@naver.com",
+  "password": "22445"
+}
 
 ### 회원 정보 조회 (셀러)
+GET http://localhost:8081/seller/getInfo
+Content-Type: application/json
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwMzU3MzcwLCJleHAiOjE2ODA0NDM3NzB9.N-2SmIvWFX5kB-8agRLwZ47Ewt_9E0-vXABUMCBxfBc
