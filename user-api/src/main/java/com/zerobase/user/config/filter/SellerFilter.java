@@ -2,7 +2,7 @@ package com.zerobase.user.config.filter;
 
 import com.zerobase.domain.common.UserVo;
 import com.zerobase.domain.config.JwtAuthenticationProvider;
-import com.zerobase.user.service.customer.CustomerService;
+import com.zerobase.user.service.seller.SellerService;
 import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -13,12 +13,12 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 
-@WebFilter(urlPatterns = "/customer/*")  // customer 에 해당하는 모든 url
+@WebFilter(urlPatterns = "/seller/*")  // customer 에 해당하는 모든 url
 @RequiredArgsConstructor
-public class CustomerFilter implements Filter {
+public class SellerFilter implements Filter {
 
     private final JwtAuthenticationProvider jwtAuthenticationProvider;
-    private final CustomerService customerService;
+    private final SellerService sellerService;
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -26,12 +26,12 @@ public class CustomerFilter implements Filter {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
         String token = httpServletRequest.getHeader("X-AUTO-TOKEN");
 
-        if(!jwtAuthenticationProvider.validateToken(token)){
+        if (!jwtAuthenticationProvider.validateToken(token)) {
             throw new ServletException("Invalid Access");
         }
 
         UserVo userVo = jwtAuthenticationProvider.getUserVo(token);
-        customerService.findByIdAndEmail(userVo.getId(), userVo.getEmail())
+        sellerService.findByIdAndEmail(userVo.getId(), userVo.getEmail())
             .orElseThrow(() -> new ServletException("Invalid access"));
 
         chain.doFilter(request, response);
