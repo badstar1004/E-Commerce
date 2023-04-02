@@ -21,6 +21,11 @@ public class ProductDto {
     private String description;
     private List<ProductItemDto> productItemDtoList;
 
+    /**
+     * ProductDto from
+     * @param product
+     * @return
+     */
     public static ProductDto from(Product product){
         List<ProductItemDto> productItemDtos = product.getProductItemList()
             .stream().map(ProductItemDto::from).collect(Collectors.toList());
@@ -30,6 +35,15 @@ public class ProductDto {
             .name(product.getName())
             .description(product.getDescription())
             .productItemDtoList(productItemDtos)
+            .build();
+    }
+
+    public static ProductDto withoutItemsFrom(Product product){
+
+        return ProductDto.builder()
+            .id(product.getId())
+            .name(product.getName())
+            .description(product.getDescription())
             .build();
     }
 }
