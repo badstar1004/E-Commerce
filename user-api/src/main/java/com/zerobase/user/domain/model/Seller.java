@@ -59,6 +59,4 @@ public class Seller extends BaseEntity{
             .build();
     }
 
-
-
 }

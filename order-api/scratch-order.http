@@ -1,0 +1,28 @@
+### 상품 추가
+POST http://localhost:8082/seller/product
+Content-Type: application/json
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDI5MjQzLCJleHAiOjE2ODA1MTU2NDN9._nVUjdOg75CvLUPaG6hqDw_zbfi0F8Xdzp_gWwVHYRM
+
+{
+  "description": "상품 설명",
+  "items": [
+    {
+      "count": 1,
+      "name": "270",
+      "price": 10000
+    }
+  ],
+  "name": "나이키 에어포스"
+}
+
+### 상품 아이템 추가
+POST http://localhost:8082/seller/product/item
+Content-Type: application/json
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDI5MjQzLCJleHAiOjE2ODA1MTU2NDN9._nVUjdOg75CvLUPaG6hqDw_zbfi0F8Xdzp_gWwVHYRM
+
+{
+  "productId": 1,
+  "count": 1,
+  "name": "280",
+  "price": 10000
+}
