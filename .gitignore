@@ -37,4 +37,4 @@ out/
 .vscode/
 
 ### application.properties ###
-application.properties
+user-api/src/main/resources/application.properties
