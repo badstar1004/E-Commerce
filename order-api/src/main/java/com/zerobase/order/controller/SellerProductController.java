@@ -5,11 +5,14 @@ import com.zerobase.order.domain.product.AddProductForm;
 import com.zerobase.order.domain.product.AddProductItemForm;
 import com.zerobase.order.domain.product.ProductDto;
 import com.zerobase.order.domain.product.ProductItemDto;
+import com.zerobase.order.domain.product.UpdateProductForm;
+import com.zerobase.order.domain.product.UpdateProductItemForm;
 import com.zerobase.order.service.ProductItemService;
 import com.zerobase.order.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -52,5 +55,35 @@ public class SellerProductController {
         return ResponseEntity.ok(ProductDto.from(
             productItemService.addProductItem(jwtAuthenticationProvider.getUserVo(token).getId(),
                 addProductItemForm)));
+    }
+
+    /**
+     * 상품 수정
+     * @param token
+     * @param updateProductForm
+     * @return
+     */
+    @PutMapping
+    public ResponseEntity<ProductDto> updateProduct(@RequestHeader(name = "X-AUTO-TOKEN") String token,
+        @RequestBody UpdateProductForm updateProductForm) {
+
+        return ResponseEntity.ok(ProductDto.from(
+            productService.updateProduct(jwtAuthenticationProvider.getUserVo(token).getId(),
+                updateProductForm)));
+    }
+
+    /**
+     * 상품 아이템 수정
+     * @param token
+     * @param updateProductItemForm
+     * @return
+     */
+    @PutMapping("/item")
+    public ResponseEntity<ProductItemDto> addProductItem(@RequestHeader(name = "X-AUTO-TOKEN") String token,
+        @RequestBody UpdateProductItemForm updateProductItemForm) {
+
+        return ResponseEntity.ok(ProductItemDto.from(
+            productItemService.updateProductItem(jwtAuthenticationProvider.getUserVo(token).getId(),
+                updateProductItemForm)));
     }
 }

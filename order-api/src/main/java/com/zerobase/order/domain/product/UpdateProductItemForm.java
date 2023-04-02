@@ -9,14 +9,11 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class AddProductItemForm {
+public class UpdateProductItemForm {
 
-    private Long productId;
-
+    private Long id;
     private String name;
-
     private Integer price;
 
     private Integer count;
-
 }
