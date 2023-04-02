@@ -11,11 +11,13 @@ import com.zerobase.order.service.ProductItemService;
 import com.zerobase.order.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -85,5 +87,33 @@ public class SellerProductController {
         return ResponseEntity.ok(ProductItemDto.from(
             productItemService.updateProductItem(jwtAuthenticationProvider.getUserVo(token).getId(),
                 updateProductItemForm)));
+    }
+
+    /**
+     * 상품 삭제
+     * @param token
+     * @param id
+     * @return
+     */
+    @DeleteMapping
+    public ResponseEntity<Void> deleteProduct(@RequestHeader(name = "X-AUTO-TOKEN") String token,
+        @RequestParam Long id) {
+
+        productService.deleteProduct(jwtAuthenticationProvider.getUserVo(token).getId(), id);
+        return ResponseEntity.ok().build();
+    }
+
+    /**
+     * 상품 아이템 삭제
+     * @param token
+     * @param id
+     * @return
+     */
+    @DeleteMapping("/item")
+    public ResponseEntity<Void> deleteProductItem(@RequestHeader(name = "X-AUTO-TOKEN") String token,
+        @RequestParam Long id) {
+
+        productItemService.deleteProductItem(jwtAuthenticationProvider.getUserVo(token).getId(), id);
+        return ResponseEntity.ok().build();
     }
 }

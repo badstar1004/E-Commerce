@@ -8,11 +8,11 @@ X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOa
   "items": [
     {
       "count": 1,
-      "name": "270",
+      "name": "230",
       "price": 10000
     }
   ],
-  "name": "나이키 에어포스"
+  "name": "아디다스 폴스미스"
 }
 
 ### 상품 아이템 추가
@@ -23,8 +23,8 @@ X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOa
 {
   "productId": 1,
   "count": 1,
-  "name": "280",
-  "price": 10000
+  "name": "260",
+  "price": 60000
 }
 
 ### 상품 수정
@@ -33,17 +33,17 @@ Content-Type: application/json
 X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDI5MjQzLCJleHAiOjE2ODA1MTU2NDN9._nVUjdOg75CvLUPaG6hqDw_zbfi0F8Xdzp_gWwVHYRM
 
 {
-  "description": "상품 설명",
-  "items": [
-    {
-      "id": 1,
-      "count": 1,
-      "name": "280",
-      "price": 110000
-    }
-  ],
-  "id": 1,
-  "name": "나이키 에어포스 한정판"
+"description": "상품 설명",
+"items": [
+  {
+    "id": 1,
+    "count": 1,
+    "name": "280",
+    "price": 110000
+  }
+],
+"id": 1,
+"name": "나이키 에어포스 한정판"
 }
 
 ### 상품 아이템 수정
@@ -57,3 +57,13 @@ X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOa
   "name": "260",
   "price": 90000
 }
+
+### 상품 삭제
+DELETE http://localhost:8082/seller/product?id=1
+Content-Type: application/json
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDI5MjQzLCJleHAiOjE2ODA1MTU2NDN9._nVUjdOg75CvLUPaG6hqDw_zbfi0F8Xdzp_gWwVHYRM
+
+### 상품 아이템 삭제
+DELETE http://localhost:8082/seller/product/item?id=2
+Content-Type: application/json
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDI5MjQzLCJleHAiOjE2ODA1MTU2NDN9._nVUjdOg75CvLUPaG6hqDw_zbfi0F8Xdzp_gWwVHYRM
