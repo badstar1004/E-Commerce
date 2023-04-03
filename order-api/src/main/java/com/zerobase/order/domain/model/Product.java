@@ -44,13 +44,14 @@ public class Product extends BaseEntity {
     private List<ProductItem> productItemList = new ArrayList<>();
 
     /**
-     * Product builder()
+     * Product of
      *
      * @param addProductForm
      * @return
      */
     public static Product of(Long sellerId, AddProductForm addProductForm) {
         return Product.builder()
+            .id(addProductForm.getId())
             .sellerId(sellerId)
             .name(addProductForm.getName())
             .description(addProductForm.getDescription())
