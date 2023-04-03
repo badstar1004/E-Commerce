@@ -13,9 +13,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaAuditing
 @SpringBootApplication
 @EnableFeignClients
-public class OrderApplication {
+public class OrderApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplication.class, args);
+        SpringApplication.run(OrderApiApplication.class, args);
     }
 }

@@ -1,7 +1,7 @@
 ### 상품 추가
 POST http://localhost:8082/seller/product
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDg5NjYxLCJleHAiOjE2ODA1NzYwNjF9.aBJfkFpNet1B35NSLzz1l8dTaRztAY8A1wjxfa9vju4
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNTIwNjk2LCJleHAiOjE2ODA2MDcwOTZ9.zAC3Jvt6zp8Cm_g5Xn2KFxAiQhwKBLuzvJ0n-x8wIpg
 
 {
   "description": "상품 설명",
@@ -20,7 +20,7 @@ X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOa
 ### 상품 아이템 추가
 POST http://localhost:8082/seller/product/item
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDg5NjYxLCJleHAiOjE2ODA1NzYwNjF9.aBJfkFpNet1B35NSLzz1l8dTaRztAY8A1wjxfa9vju4
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNTIwNjk2LCJleHAiOjE2ODA2MDcwOTZ9.zAC3Jvt6zp8Cm_g5Xn2KFxAiQhwKBLuzvJ0n-x8wIpg
 
 {
   "productId": 1,
@@ -32,7 +32,7 @@ X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOa
 ### 상품 수정
 PUT http://localhost:8082/seller/product
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDg5NjYxLCJleHAiOjE2ODA1NzYwNjF9.aBJfkFpNet1B35NSLzz1l8dTaRztAY8A1wjxfa9vju4
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNTIwNjk2LCJleHAiOjE2ODA2MDcwOTZ9.zAC3Jvt6zp8Cm_g5Xn2KFxAiQhwKBLuzvJ0n-x8wIpg
 
 {
 "description": "상품 설명",
@@ -51,7 +51,7 @@ X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOa
 ### 상품 아이템 수정
 PUT http://localhost:8082/seller/product/item
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDg5NjYxLCJleHAiOjE2ODA1NzYwNjF9.aBJfkFpNet1B35NSLzz1l8dTaRztAY8A1wjxfa9vju4
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNTIwNjk2LCJleHAiOjE2ODA2MDcwOTZ9.zAC3Jvt6zp8Cm_g5Xn2KFxAiQhwKBLuzvJ0n-x8wIpg
 
 {
   "id": 1,
@@ -63,12 +63,12 @@ X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOa
 ### 상품 삭제
 DELETE http://localhost:8082/seller/product?id=2
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDg5NjYxLCJleHAiOjE2ODA1NzYwNjF9.aBJfkFpNet1B35NSLzz1l8dTaRztAY8A1wjxfa9vju4
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNTIwNjk2LCJleHAiOjE2ODA2MDcwOTZ9.zAC3Jvt6zp8Cm_g5Xn2KFxAiQhwKBLuzvJ0n-x8wIpg
 
 ### 상품 아이템 삭제
 DELETE http://localhost:8082/seller/product/item?id=2
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDg5NjYxLCJleHAiOjE2ODA1NzYwNjF9.aBJfkFpNet1B35NSLzz1l8dTaRztAY8A1wjxfa9vju4
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNTIwNjk2LCJleHAiOjE2ODA2MDcwOTZ9.zAC3Jvt6zp8Cm_g5Xn2KFxAiQhwKBLuzvJ0n-x8wIpg
 
 
 ### 상품 검색
@@ -83,7 +83,7 @@ Content-Type: application/json
 ### 장바구니 추가
 POST http://localhost:8082/customer/cart
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA0OTY3NzYsImV4cCI6MTY4MDU4MzE3Nn0.COg3D9aLdBdga6uBxwi4j2JO4NvRPb40-MTGNbwPef8
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA1MjA3ODEsImV4cCI6MTY4MDYwNzE4MX0.EA2kvMqGSq3bVCq4gwvPq32IRLis2zQl8TLbzyJtpNQ
 
 {
   "description": "상품 설명",
@@ -103,12 +103,12 @@ X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOa
 ### 장바구니 보기
 GET http://localhost:8082/customer/cart
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA0OTY3NzYsImV4cCI6MTY4MDU4MzE3Nn0.COg3D9aLdBdga6uBxwi4j2JO4NvRPb40-MTGNbwPef8
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA1MjA3ODEsImV4cCI6MTY4MDYwNzE4MX0.EA2kvMqGSq3bVCq4gwvPq32IRLis2zQl8TLbzyJtpNQ
 
 ### 장바구니 수정
 PUT http://localhost:8082/customer/cart
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA0OTY3NzYsImV4cCI6MTY4MDU4MzE3Nn0.COg3D9aLdBdga6uBxwi4j2JO4NvRPb40-MTGNbwPef8
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA1MjA3ODEsImV4cCI6MTY4MDYwNzE4MX0.EA2kvMqGSq3bVCq4gwvPq32IRLis2zQl8TLbzyJtpNQ
 
 {
   "customerId": 1,
@@ -122,7 +122,35 @@ X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOa
       "name": "아디다스 스탠스미스 한정판",
       "productItems": [
         {
-          "count": 2,
+          "count": 1,
+          "id": 1,
+          "name": "아디다스 스탠스미스",
+          "price": 10000
+        }
+      ],
+      "sellerId": 1
+    }
+  ]
+}
+
+### 장바구니 주문
+POST http://localhost:8082/customer/cart/order
+Content-Type: application/json
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA1MjA3ODEsImV4cCI6MTY4MDYwNzE4MX0.EA2kvMqGSq3bVCq4gwvPq32IRLis2zQl8TLbzyJtpNQ
+
+{
+  "customerId": 1,
+  "messages": [
+    "string"
+  ],
+  "products": [
+    {
+      "description": "상품 설명",
+      "id": 1,
+      "name": "아디다스 스탠스미스 한정판",
+      "productItems": [
+        {
+          "count": 1,
           "id": 1,
           "name": "아디다스 스탠스미스",
           "price": 10000

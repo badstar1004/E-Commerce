@@ -2,6 +2,7 @@ package com.zerobase.order.controller;
 
 import com.zerobase.domain.config.JwtAuthenticationProvider;
 import com.zerobase.order.application.CartApplication;
+import com.zerobase.order.application.OrderApplication;
 import com.zerobase.order.domain.product.AddProductCartForm;
 import com.zerobase.order.domain.redis.Cart;
 import lombok.RequiredArgsConstructor;
@@ -15,12 +16,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/customer/cart")
 @RequiredArgsConstructor
+@RequestMapping("/customer/cart")
 public class CustomerCartController {
 
-    // 임시 코드
     private final CartApplication cartApplication;
+
+    private final OrderApplication orderApplication;
+
     private final JwtAuthenticationProvider jwtAuthenticationProvider;
 
     /**
@@ -61,5 +64,20 @@ public class CustomerCartController {
         @RequestBody Cart cart){
         return ResponseEntity.ok(cartApplication.updateCart(
             jwtAuthenticationProvider.getUserVo(token).getId(), cart));
+    }
+
+    /**
+     * 장바구니 주문
+     * @param token
+     * @param cart
+     * @return
+     */
+    @PostMapping("/order")
+    public ResponseEntity<Cart> order(
+        @RequestHeader(name = "X-AUTO-TOKEN") String token,
+        @RequestBody Cart cart){
+
+        orderApplication.order(token, cart);
+        return ResponseEntity.ok().build();
     }
 }
