@@ -99,3 +99,36 @@ X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOa
   ],
   "sellerId": 1
 }
+
+### 장바구니 보기
+GET http://localhost:8082/customer/cart
+Content-Type: application/json
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA0OTY3NzYsImV4cCI6MTY4MDU4MzE3Nn0.COg3D9aLdBdga6uBxwi4j2JO4NvRPb40-MTGNbwPef8
+
+### 장바구니 수정
+PUT http://localhost:8082/customer/cart
+Content-Type: application/json
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA0OTY3NzYsImV4cCI6MTY4MDU4MzE3Nn0.COg3D9aLdBdga6uBxwi4j2JO4NvRPb40-MTGNbwPef8
+
+{
+  "customerId": 1,
+  "messages": [
+    "string"
+  ],
+  "products": [
+    {
+      "description": "상품 설명",
+      "id": 1,
+      "name": "아디다스 스탠스미스 한정판",
+      "productItems": [
+        {
+          "count": 2,
+          "id": 1,
+          "name": "아디다스 스탠스미스",
+          "price": 10000
+        }
+      ],
+      "sellerId": 1
+    }
+  ]
+}
