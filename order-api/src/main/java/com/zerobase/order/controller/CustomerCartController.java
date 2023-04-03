@@ -6,6 +6,7 @@ import com.zerobase.order.domain.product.AddProductCartForm;
 import com.zerobase.order.domain.redis.Cart;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -21,6 +22,12 @@ public class CustomerCartController {
     private final CartApplication cartApplication;
     private final JwtAuthenticationProvider jwtAuthenticationProvider;
 
+    /**
+     * 장바구니 추가
+     * @param token
+     * @param addProductCartForm
+     * @return
+     */
     @PostMapping
     public ResponseEntity<Cart> addCart(
         @RequestHeader(name = "X-AUTO-TOKEN") String token,
@@ -29,4 +36,15 @@ public class CustomerCartController {
             jwtAuthenticationProvider.getUserVo(token).getId(), addProductCartForm));
     }
 
+    /**
+     * 장바구니 확인
+     * @param token
+     * @return
+     */
+    @GetMapping
+    public ResponseEntity<Cart> showCart(
+        @RequestHeader(name = "X-AUTO-TOKEN") String token) {
+        return ResponseEntity.ok(cartApplication.getCart(
+            jwtAuthenticationProvider.getUserVo(token).getId()));
+    }
 }
