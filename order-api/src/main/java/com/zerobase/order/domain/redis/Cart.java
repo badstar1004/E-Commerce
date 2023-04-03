@@ -24,6 +24,14 @@ public class Cart {
     private List<String> messages = new ArrayList<>();
 
     /**
+     * 생성자
+     * @param customerId
+     */
+    public Cart(Long customerId){
+        this.customerId = customerId;
+    }
+
+    /**
      * @param message
      */
     public void addMessage(String message) {
