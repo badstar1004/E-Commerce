@@ -41,7 +41,7 @@ public class CartApplication {
 
         Cart cart = cartService.getCart(customerId);
 
-        if(cart != null && !addAble(cart, product, addProductCartForm)){
+        if(!addAble(cart, product, addProductCartForm)){
             throw new CustomException(ITEM_COUNT_NOT_ENOUGH);
         }
 
@@ -94,6 +94,7 @@ public class CartApplication {
     public Cart getCart(Long customerId){
 
         Cart cart = refreshCart(cartService.getCart(customerId));
+        cartService.putCart(cart.getCustomerId(), cart);
         Cart returnCart = new Cart();
         returnCart.setCustomerId(customerId);
         returnCart.setProducts(cart.getProducts());
@@ -120,11 +121,20 @@ public class CartApplication {
         return getCart(customerId);
     }
 
+    /**
+     * 테스트 시
+     * @param customerId
+     */
     public void clearCart(Long customerId){
         cartService.putCart(customerId, null);
     }
 
-    private Cart refreshCart(Cart cart){
+    /**
+     * 장바구니 수정사항 예외처리
+     * @param cart
+     * @return
+     */
+    protected Cart refreshCart(Cart cart){
         // 1. 상품이나 상품의 아이템의 정보, 가격, 수량이 변경되었는지 체크
         // 그에 맞는 알람을 제공
         // 2. 상품의 수량, 가격을 우리가 임의로 변경
@@ -194,12 +204,12 @@ public class CartApplication {
                 }
             }
 
-            //
             if(cartProduct.getProductItems().size() == 0){
                 cart.getProducts().remove(cartProduct);
                 i--;
 
                 cart.addMessage(cartProduct.getName() + " 상품의 옵션이 모두 없어져 구매가 불가능합니다.");
+                continue;
 
             } else if(tempMessage.size() > 0){
                 StringBuilder stringBuilder = new StringBuilder();
@@ -212,7 +222,7 @@ public class CartApplication {
                 cart.addMessage(stringBuilder.toString());
             }
         }
-        cartService.putCart(cart.getCustomerId(), cart);
+
         return cart;
     }
 }

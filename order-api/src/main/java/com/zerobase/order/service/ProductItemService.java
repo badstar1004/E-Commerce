@@ -78,4 +78,14 @@ public class ProductItemService {
         
         productItemRepository.delete(productItem);
     }
+
+    /**
+     * db 에서 조회 후 계산
+     * @param id
+     * @return
+     */
+    @Transactional
+    public ProductItem getProductItem(Long id){
+        return productItemRepository.getById(id);
+    }
 }

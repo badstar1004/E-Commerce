@@ -15,7 +15,11 @@ public enum ErrorCode {
     
     // 장바구니
     CART_CHANGE_FAIL(HttpStatus.BAD_REQUEST, "아이템명이 중복입니다."),
-    ITEM_COUNT_NOT_ENOUGH(HttpStatus.BAD_REQUEST, "상품의 수량이 부족합니다.");
+    ITEM_COUNT_NOT_ENOUGH(HttpStatus.BAD_REQUEST, "상품의 수량이 부족합니다."),
+
+    // 결제
+    ORDER_FAIL_CHECK_CART(HttpStatus.BAD_REQUEST, "주문 불가, 장바구니를 확인해 주세요."),
+    ORDER_FAIL_NO_MONEY(HttpStatus.BAD_REQUEST, "주문 불가, 잔액이 부족합니다.");
 
     private final HttpStatus httpStatus;
     private final String detail;
