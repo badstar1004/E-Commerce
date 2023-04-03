@@ -6,7 +6,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.envers.Audited;
 
 @Getter
 @Setter
@@ -15,6 +14,7 @@ import org.hibernate.envers.Audited;
 @AllArgsConstructor
 public class AddProductForm {
 
+    private Long id;
     private String name;
     private String description;
 

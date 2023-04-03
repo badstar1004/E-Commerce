@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ### 이메일 인증 (고객)
-GET http://localhost:8081/signup/customer/verify/?email=eunjungkim1004@naver.com&code=7RBka7XYu6
+GET http://localhost:8081/signup/customer/verify/?email=eunjungkim1004@naver.com&code=E2r5sKPuHJ
 
 ### 로그인 (고객)
 POST http://localhost:8081/signin/customer
@@ -25,12 +25,12 @@ Content-Type: application/json
 ### 회원 정보 조회 (고객)
 GET http://localhost:8081/customer/getInfo
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAzNTY2MTQsImV4cCI6MTY4MDQ0MzAxNH0.iFWtzRSbxyOYWnI67b_Q7ct3DV2qGCxX_EWAFToRaBY
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA0ODk1MTIsImV4cCI6MTY4MDU3NTkxMn0.6Rc-yRoRb4GavuLXi6PGtW0Wfv_KyB0deuyg1c3wO7U
 
 ### 잔액 변경 (고객)
 POST http://localhost:8081/customer/balance
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODAzNTY2MTQsImV4cCI6MTY4MDQ0MzAxNH0.iFWtzRSbxyOYWnI67b_Q7ct3DV2qGCxX_EWAFToRaBY
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA0ODk1MTIsImV4cCI6MTY4MDU3NTkxMn0.6Rc-yRoRb4GavuLXi6PGtW0Wfv_KyB0deuyg1c3wO7U
 
 {
   "from": "server",
@@ -67,4 +67,4 @@ Content-Type: application/json
 ### 회원 정보 조회 (셀러)
 GET http://localhost:8081/seller/getInfo
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwMzU3MzcwLCJleHAiOjE2ODA0NDM3NzB9.N-2SmIvWFX5kB-8agRLwZ47Ewt_9E0-vXABUMCBxfBc
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDg5NjYxLCJleHAiOjE2ODA1NzYwNjF9.aBJfkFpNet1B35NSLzz1l8dTaRztAY8A1wjxfa9vju4

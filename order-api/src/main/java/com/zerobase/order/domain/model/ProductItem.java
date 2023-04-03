@@ -1,7 +1,6 @@
 package com.zerobase.order.domain.model;
 
 import com.zerobase.order.domain.product.AddProductItemForm;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
