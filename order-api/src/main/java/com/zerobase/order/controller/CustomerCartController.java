@@ -8,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -46,5 +47,19 @@ public class CustomerCartController {
         @RequestHeader(name = "X-AUTO-TOKEN") String token) {
         return ResponseEntity.ok(cartApplication.getCart(
             jwtAuthenticationProvider.getUserVo(token).getId()));
+    }
+
+    /**
+     * 장바구니 변경
+     * @param token
+     * @param cart
+     * @return
+     */
+    @PutMapping
+    public ResponseEntity<Cart> updateCart(
+        @RequestHeader(name = "X-AUTO-TOKEN") String token,
+        @RequestBody Cart cart){
+        return ResponseEntity.ok(cartApplication.updateCart(
+            jwtAuthenticationProvider.getUserVo(token).getId(), cart));
     }
 }
