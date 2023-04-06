@@ -25,17 +25,17 @@ Content-Type: application/json
 ### 회원 정보 조회 (고객)
 GET http://localhost:8081/customer/getInfo
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA1MjA3ODEsImV4cCI6MTY4MDYwNzE4MX0.EA2kvMqGSq3bVCq4gwvPq32IRLis2zQl8TLbzyJtpNQ
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA2OTQxNTUsImV4cCI6MTY4MDc4MDU1NX0.cc7axJiz2shtrbDV6oy6Rie2wUck0eegtT7UF27gQ-A
 
 ### 잔액 변경 (고객)
 POST http://localhost:8081/customer/balance
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA1MjA3ODEsImV4cCI6MTY4MDYwNzE4MX0.EA2kvMqGSq3bVCq4gwvPq32IRLis2zQl8TLbzyJtpNQ
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA2OTQxNTUsImV4cCI6MTY4MDc4MDU1NX0.cc7axJiz2shtrbDV6oy6Rie2wUck0eegtT7UF27gQ-A
 
 {
   "from": "server",
   "message": "충전",
-  "money": 10000
+  "money": 500000
 }
 
 #################################
@@ -47,7 +47,7 @@ Content-Type: application/json
 {
   "birth": "1991-10-04",
   "email": "eunjungkim1004@naver.com",
-  "name": "기믄정",
+  "name": "기믄졍",
   "password": "22445",
   "phone": "010-1111-5555"
 }
@@ -67,4 +67,4 @@ Content-Type: application/json
 ### 회원 정보 조회 (셀러)
 GET http://localhost:8081/seller/getInfo
 Content-Type: application/json
-X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDg5NjYxLCJleHAiOjE2ODA1NzYwNjF9.aBJfkFpNet1B35NSLzz1l8dTaRztAY8A1wjxfa9vju4
+X-AUTO-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJJcHluRS8veDhWSE03NUo5Q0EvS2pXOHNOam9UVDJmK0d3WjZySzdYWDRrPSIsImp0aSI6IkNtWUR2NU1LNVlVeWlrOEtHTkR3b3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNjk0MTg1LCJleHAiOjE2ODA3ODA1ODV9.Qg77giJ6AkHknLm3bp0CI_6Xe7uAcm6UQds3bjQ7vWo

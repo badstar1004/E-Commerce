@@ -57,13 +57,13 @@ public class CustomerCartController {
      * @param token
      * @param cart
      * @return
-     */
-    @PutMapping
-    public ResponseEntity<Cart> updateCart(
-        @RequestHeader(name = "X-AUTO-TOKEN") String token,
-        @RequestBody Cart cart){
-        return ResponseEntity.ok(cartApplication.updateCart(
-            jwtAuthenticationProvider.getUserVo(token).getId(), cart));
+                */
+        @PutMapping
+        public ResponseEntity<Cart> updateCart(
+            @RequestHeader(name = "X-AUTO-TOKEN") String token,
+            @RequestBody Cart cart){
+            return ResponseEntity.ok(cartApplication.updateCart(
+                jwtAuthenticationProvider.getUserVo(token).getId(), cart));
     }
 
     /**

@@ -117,6 +117,7 @@ public class CartApplication {
     public Cart updateCart(Long customerId, Cart cart){
         // 실질적으로 변하는 데이터
         // 상품의 삭제, 수량 변경
+
         cartService.putCart(customerId, cart);
         return getCart(customerId);
     }
@@ -185,7 +186,7 @@ public class CartApplication {
                 }
 
                 // 수량
-                if(cartProductItem.getCount().equals(pi.getCount())){
+                if(cartProductItem.getCount() < pi.getCount()){
                     isCountNotEnough = true;
                     cartProductItem.setCount(pi.getCount());
                 }
@@ -209,7 +210,6 @@ public class CartApplication {
                 i--;
 
                 cart.addMessage(cartProduct.getName() + " 상품의 옵션이 모두 없어져 구매가 불가능합니다.");
-                continue;
 
             } else if(tempMessage.size() > 0){
                 StringBuilder stringBuilder = new StringBuilder();
