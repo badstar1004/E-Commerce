@@ -38,7 +38,7 @@ public class OrderApplication {
      */
     @Transactional
     public void order(String token, Cart cart){
-        // 1. 주문 시 기존 카드 버림
+        // 1. 주문 시 기존 카트 버림
         // 2. 선택주문 : 사지 않은 상품을 살려야함
         // -- 구현해야함
 
